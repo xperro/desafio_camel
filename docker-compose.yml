@@ -17,7 +17,7 @@ services:
       - 3306
     ports:
       - 3306:3306
-  php:
+  api:
     build:
       context: .
       dockerfile: ./api/Dockerfile
@@ -29,3 +29,15 @@ services:
       - db
     volumes:
       - ./api:/html
+  app:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    ports:
+      - "9000:9000"
+    links:
+      - api
+    depends_on:
+      - api
+    volumes:
+      - ./app:/html
