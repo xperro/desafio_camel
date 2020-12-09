@@ -18,13 +18,14 @@ services:
     ports:
       - 3306:3306
   php:
-    image: "daijie/php7-alpine"
-    build: ./api/Dockerfile
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
     ports:
-      - 80:80
-    volumes:
-      - ./php/www:/var/www/html
+      - "8000:8000"
     links:
       - db
     depends_on:
       - db
+    volumes:
+      - ./api:/html
