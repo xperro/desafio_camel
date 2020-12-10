@@ -4,7 +4,6 @@
 // Database connection
 include('getUser.php');
 
-global $wrongPwdErr, $accountNotExistErr, $emailPwdErr, $verificationRequiredErr, $email_empty_err, $pass_empty_err;
 
 if (isset($_POST['login'])) {
 
@@ -16,17 +15,24 @@ if (isset($_POST['login'])) {
     if (!empty($email) && !empty($user_pass)) {
 
         $response = $this->loginUser($email,$user_pass);
-        
+
+        if($response != false){
+
+        }else{
+            return "<div class=''>
+                               Bad credentials.
+                    </div>";
+        }
 
     } else {
         if (empty($email)) {
-            $email_empty_err = "<div class=''>
+            return "<div class=''>
                                 You need to provide email.
                     </div>";
         }
 
         if (empty($user_pass)) {
-            $pass_empty_err = "<div class=''>
+            return "<div class=''>
                             You need to provide password.
                         </div>";
         }
