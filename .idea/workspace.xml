@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc7ad9ab-2c52-4f2a-9e9d-aef8646f50fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/getUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/index/html/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/login/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/login/html/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="fc7ad9ab-2c52-4f2a-9e9d-aef8646f50fd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="108">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -270,12 +262,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607387799621</updated>
-      <workItem from="1607387801712" duration="39177000" />
+      <workItem from="1607387801712" duration="39455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39177000" />
+    <option name="totallyTimeSpent" value="39455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
@@ -432,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="108">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
         </state>
       </provider>
     </entry>
