@@ -1,0 +1,50 @@
+body{
+    background: #b7b7b7;
+}
+div{
+    width:400px;
+    height:390px;
+    background: #FFFFFF;
+    margin:auto;
+    margin-top: 170px;
+    border-radius: 5px;
+    border-color:#FFFFFF;
+    border-style: solid;
+    border-width: 4px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center
+}
+p{
+    color:#707476;
+    margin-top: 50px;
+    font-size:2.5em;
+    font-weight: bold
+}
+input{
+    text-align: center;
+    width:320px;
+    height: 50px;
+    background: #ECF0F1;
+    border-color:#ECF0F1;
+    border-style: solid;
+    font-size: 1.4em;
+}
+input[type="password"]{
+    position: relative;
+    top: 15px;
+}
+input[value="Log In"]{
+    position: relative;
+    top:27px;
+    background: #4caf50;
+    color: white;
+    height:68px;
+    color:#FBEBF3;
+    border-radius: 7px;
+}
+a{
+    position: relative;
+    top:40px;
+    font-weight: 500;
+    color:#6B6A6A;
+}
