@@ -1,6 +1,7 @@
 
 CREATE TABLE user (
     `id` INT NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(255),
     `name` VARCHAR(255),
     `lastname` VARCHAR(255),
     `user_pass` VARCHAR(255),
@@ -10,5 +11,5 @@ CREATE TABLE user (
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO user(name, lastname, user_pass, admin_role, user_ip, user_last_login) VALUES
-('Jorge','Aguilera','$2y$12$0fBY64yhOyZ000elLY6Ipe/a4ILCu8ONnHT3zgei1hWJMvYE0/Y2u',1,'192.168.1.1','2020-01-01');
+INSERT INTO user(email,name, lastname, user_pass, admin_role, user_ip, user_last_login) VALUES
+('jorge@aguilera.cl','Jorge','Aguilera','$2y$12$0fBY64yhOyZ000elLY6Ipe/a4ILCu8ONnHT3zgei1hWJMvYE0/Y2u',1,'192.168.1.1','2020-01-01');
