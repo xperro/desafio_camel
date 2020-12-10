@@ -12,7 +12,7 @@ include_once '../../../controller/login.php';
 <body>
     <div>
         <p>Login</p>
-        <form>
+        <form method="post">
             <input type="email" name="email" placeholder="Email"/>
             <input type="password" name="user_pass" placeholder="Password" />
             <input type="submit" value="Log In" />
