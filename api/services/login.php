@@ -8,9 +8,9 @@ include_once '../class/user.php';
 $database = new Database();
 $db = $database->do_Connection();
 
-$items = new User($db);
-
-$action = $items->loginUser();
+$user = new User($db);
+$data = json_decode(file_get_contents("php://input"));
+$action = $user->loginUser($data->email,$data->user_pass);
 
 if($action != false){
 
