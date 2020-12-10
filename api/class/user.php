@@ -22,6 +22,26 @@
             $this->connection = $db;
         }
 
+        //LOGIN USER
+        public function loginUser($user,$pass){
+            //HASH PASSWORD
+            $query = "SELECT * FROM " . $this->table. " WHERE email = '".$user."'";
+            $action = $this->connection->prepare($query);
+            $action->execute();
+            $result = $action -> fetchAll();
+            foreach( $result as $row ) {
+
+                if(password_verify($pass, $row["user_pass"])){
+                    $row["user_pass"] = '';
+                    return $row;
+                }else{
+                    return false;
+                }
+            }
+
+
+
+        }
         //VALIDATE PERMISSIONS
         public function adminRole($user,$pass){
             //HASH PASSWORD
