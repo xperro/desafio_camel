@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
         $response = $this->loginUser($email,$user_pass);
 
         if($response["body"]["message"] != "No records found"){
-                
+
         }else{
             return "<div class=''>
                                Bad credentials or user doesnt exists.
