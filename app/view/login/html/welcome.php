@@ -16,6 +16,11 @@ include_once '../../../controller/login.php';
             <input type="email" name="email" placeholder="Email"/>
             <input type="password" name="user_pass" placeholder="Password" />
             <input type="submit" value="Log In" />
+            <?php
+            if($msg!= ''){
+                echo $msg;
+            }
+            ?>
         </form>
     </div>
 </body>

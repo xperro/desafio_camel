@@ -11,7 +11,6 @@
         public $name;
         public $lastname;
         public $user_pass;
-        public $user_ip;
         public $admin_role;
         public $user_last_login;
         public $email_authorization;
@@ -63,7 +62,7 @@
         }
         //  Method--GET ALL USERS--
         public function getUsers(){
-            $query = "SELECT id, email, name, lastname, admin_role, user_ip, user_last_login FROM " . $this->table;
+            $query = "SELECT id, email, name, lastname, admin_role, user_last_login FROM " . $this->table;
             $action = $this->connection->prepare($query);
             $action->execute();
             return $action;
@@ -81,7 +80,6 @@
                             name = :name,
                             lastname = :lastname,
                             user_pass = :user_pass, 
-                            user_ip = :user_ip, 
                             admin_role = :admin_role, 
                             user_last_login = :user_last_login";
 
@@ -95,14 +93,12 @@
                 $this->user_pass=htmlspecialchars(strip_tags($pass));
                 $this->admin_role=intval($this->admin_role);
                 $this->user_last_login=htmlspecialchars(strip_tags($this->user_last_login));
-                $this->user_ip =  htmlspecialchars(strip_tags($this->user_ip));
 
                 //DATA TO ACTION
 
                 $action->bindParam(":email", $this->email, PDO::PARAM_STR);
                 $action->bindParam(":name", $this->name, PDO::PARAM_STR);
                 $action->bindParam(":lastname", $this->lastname, PDO::PARAM_STR);
-                $action->bindParam(":user_ip",$this->user_ip, PDO::PARAM_STR);
                 $action->bindParam(":admin_role",$this->admin_role, PDO::PARAM_INT);
                 $action->bindParam(":user_pass", $this->user_pass, PDO::PARAM_STR);
                 $action->bindParam(":user_last_login", $this->user_last_login, PDO::PARAM_STR);
@@ -170,6 +166,37 @@
                 http_response_code(406);
                 return 0;
             }
+        }
+
+        //Method--Update date login--
+
+        public function updateDateLogin(){
+                $query = "UPDATE
+                            ". $this->table ."
+                        SET
+                            user_last_login = :user_last_login
+                         
+                        WHERE 
+                            id = :id";
+                $actionUpdate = $this->connection->prepare($query);
+
+                //PREPARE ATTRIBUTES
+                $this->user_last_login=htmlspecialchars(strip_tags($this->user_last_login));
+                $this->id=intval($this->id);
+
+
+                //DATA TO ACTION
+
+            $actionUpdate->bindParam(":user_last_login", $this->user_last_login, PDO::PARAM_STR);
+            $actionUpdate->bindParam(":id",$this->id, PDO::PARAM_INT);
+
+            if($actionUpdate->execute()){
+                    return 1;
+                }else{
+                    return -1;
+                }
+                return 0;
+
         }
 
         // READ USER

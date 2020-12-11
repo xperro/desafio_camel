@@ -25,7 +25,6 @@ if($itemCount > 0){
             "email" => $email,
             "name" => $name,
             "lastname" => $lastname,
-            "user_ip" => $user_ip,
             "user_last_login" => $user_last_login,
         );
 

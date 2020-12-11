@@ -5,38 +5,46 @@
 include('getUser.php');
 
 
-if (isset($_POST['login'])) {
-
+    $msg = '';
+    if(isset( $_POST['email']) && isset( $_POST['user_pass'])){
     $email = $_POST['email'];
     $user_pass = $_POST['user_pass'];
-
-
-
     if (!empty($email) && !empty($user_pass)) {
 
-        $response = $this->loginUser($email,$user_pass);
+        $response = loginUser($email,$user_pass);
+        $response = $response["body"][0];
+        if($response["email"]){
+            session_start();
+            $_SESSION['id'] = $response["id"];
+            $_SESSION['email'] = $response["email"];
+            $_SESSION['name'] = $response["name"];
+            $_SESSION['lastname'] = $response["lastname"];
+            $_SESSION['admin_role'] = $response["admin_role"];
+            $_SESSION['user_last_login'] = $response["user_last_login"];
+            $_SESSION['loggedin'] = true;
 
-        if($response["body"]["message"] != "No records found"){
+            header("location: /../view/index/html/dashboard.php");
 
         }else{
-            return "<div class=''>
+            $msg = "<p class='msg'>
                                Bad credentials or user doesnt exists.
-                    </div>";
+                    </p>";
         }
 
     } else {
         if (empty($email)) {
-            return "<div class=''>
+            $msg = "<p class='msg'>
                                 You need to provide email.
-                    </div>";
+                    </p>";
         }
 
         if (empty($user_pass)) {
-            return "<div class=''>
+            $msg = "<p class='msg'>
                             You need to provide password.
-                        </div>";
+                        </p>";
         }
     }
+    }
 
-}
+
 

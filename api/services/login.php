@@ -23,14 +23,16 @@ if($action != false){
             "email" => $email,
             "name" => $name,
             "lastname" => $lastname,
-            "user_ip" => $user_ip,
+            "admin_role" => $admin_role,
             "user_last_login" => $user_last_login,
         );
-
+        $now = date("Y-m-d H:i:s");
         array_push($userArr["body"], $e);
-
-    http_response_code(200);
-    echo json_encode($userArr);
+        $user->user_last_login = $now;
+        $user->id = $id;
+        $response_update = $user->updateDateLogin();
+        http_response_code(200);
+        echo json_encode($userArr);
 
 }else{
     $userArr = array();

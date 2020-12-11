@@ -24,7 +24,6 @@ $user->name = $data->name;
 $user->lastname = $data->lastname;
 $user->admin_role = $data->admin_role;
 $user->user_pass =$data->user_pass;
-$user->user_ip = $_SERVER['REMOTE_ADDR'];
 $user->user_last_login = date('Y-m-d H:i:s');
 $response = $user->newUser();
 

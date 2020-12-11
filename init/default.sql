@@ -6,10 +6,9 @@ CREATE TABLE user (
     `lastname` VARCHAR(255),
     `user_pass` VARCHAR(255),
     `admin_role` BOOLEAN DEFAULT 0,
-    `user_ip` varchar(15) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-    `user_last_login` DATE,
+    `user_last_login` DATETIME,
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO user(email,name, lastname, user_pass, admin_role, user_ip, user_last_login) VALUES
-('jorge@aguilera.cl','Jorge','Aguilera','$2y$12$0fBY64yhOyZ000elLY6Ipe/a4ILCu8ONnHT3zgei1hWJMvYE0/Y2u',1,'192.168.1.1','2020-01-01');
+INSERT INTO user(email,name, lastname, user_pass, admin_role, user_last_login) VALUES
+('jorge@aguilera.cl','Jorge','Aguilera','$2y$12$0fBY64yhOyZ000elLY6Ipe/a4ILCu8ONnHT3zgei1hWJMvYE0/Y2u',1,'2020-12-09 19:30:13');

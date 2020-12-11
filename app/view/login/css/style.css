@@ -48,3 +48,8 @@ a{
     font-weight: 500;
     color:#6B6A6A;
 }
+.msg{
+    font-size: 10px;
+    color: red;
+    font-weight: 100;
+}
