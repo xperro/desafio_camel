@@ -17,7 +17,7 @@ docker-compose up
 
 ## Usage example
 
-Docker containers are ready to use after run the previous command.
+Docker containers are ready for use after run the previous command.
 
 This repository have 3 containers:
 1. [WebApp](http://localhost:9000/)
