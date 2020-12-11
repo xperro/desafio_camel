@@ -8,7 +8,7 @@ Clone the repository.
 
 ##Docker Initialization
 
-#####Execute the docker compose file (docker-compose.yml) using the following command.
+*Execute the docker compose file (docker-compose.yml) using the following command.
 (Required: [Docker](https://docker.com/)
 )
 ```sh
@@ -48,6 +48,8 @@ The API have the following services:
 3. Create
 4. Delete
 5. Login
+
+The test examples use POSTMAN.
 
 ##ADMIN CREDENTIALS
 
