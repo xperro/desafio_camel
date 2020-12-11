@@ -1,4 +1,5 @@
 <?php
+//--Method expiration--
 
 function sessionExpire(){
 

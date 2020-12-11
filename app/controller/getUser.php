@@ -1,5 +1,7 @@
 <?php
 
+//--Method Login--
+
  function loginUser($email,$user_pass){
 
 

@@ -9,11 +9,15 @@ include('getUser.php');
     if(isset( $_POST['email']) && isset( $_POST['user_pass'])){
     $email = $_POST['email'];
     $user_pass = $_POST['user_pass'];
-    if (!empty($email) && !empty($user_pass)) {
+        //--validate form--
+
+        if (!empty($email) && !empty($user_pass)) {
 
         $response = loginUser($email,$user_pass);
         $response = $response["body"][0];
-        if($response["email"]){
+            //--response connection--
+
+            if($response["email"]){
             session_start();
             $_SESSION['id'] = $response["id"];
             $_SESSION['email'] = $response["email"];

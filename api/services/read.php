@@ -5,6 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/db-connection.php';
 include_once '../class/user.php';
 
+//--Database connection--
 $database = new Database();
 $db = $database->do_Connection();
 
@@ -12,6 +13,7 @@ $items = new User($db);
 
 $action = $items->getUsers();
 $itemCount = $action->rowCount();
+//--Results--
 
 if($itemCount > 0){
 
