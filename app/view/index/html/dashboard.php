@@ -22,7 +22,14 @@ if(!isset($_SESSION['loggedin']))
     <body>
     <h1>Home</h1>
         <div class="Card1">
-            <div class="photo"></div>
+            <div class="<?php
+            if($_SESSION['admin_role'] == 1){
+                echo 'photo';
+            }else{
+                echo 'photo2';
+            }
+
+            ?>"></div>
 
             <div class="description">
                 <div class="line">
