@@ -16,11 +16,7 @@
          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
          CURLOPT_CUSTOMREQUEST => "POST",
          CURLOPT_POSTFIELDS => "{\n\n\n\"email\":\"$email\",\n\"user_pass\":\"$user_pass\"\n\n\n}",
-         CURLOPT_HTTPHEADER => array(
-             "Content-Type: application/json",
-             "Postman-Token: 76b76a15-fcb3-4dc4-9ee4-304c72c5dfdf",
-             "cache-control: no-cache"
-         ),
+
      ));
 
      $response = curl_exec($curl);
