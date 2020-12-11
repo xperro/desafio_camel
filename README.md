@@ -17,7 +17,10 @@ Clone the repository.
 docker-compose up
 ```
 - Recomendation: The containers will use the following ports: 8000, 9000, 3306 (Close this ports if you are using it)
-
+- If docker-compose up give permission problem you need to execute the next command (root project folder):
+```sh
+chmod +x init
+```
 ## Usage example
 
 Docker containers are ready for use after run the previous command.
