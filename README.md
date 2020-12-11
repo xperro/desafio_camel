@@ -69,6 +69,24 @@ Parameters: Dont need parameters.
 
 ![](read-postman.png)
 
+##Create
+
+For use create you can consume the service from postman using this url:
+http://localhost:8000/services/create.php
+
+Parameters: Body example:
+
+{
+"email_authorization":"jorge@aguilera.cl",
+"pass_authorization":"testpass",
+"email":"new@use5r.cl",
+"user_pass":"test5",
+"name":"Camel5",
+"lastname":"Inc",
+"admin_role":0
+}
+![](create-postman.png)
+
 ##Update
 
 For use update you can consume the service from postman using this url:
@@ -89,26 +107,6 @@ Parameters: Body example:
 
 ![](update-postman.png)
 
-##Create
-
-For use create you can consume the service from postman using this url:
-http://localhost:8000/services/create.php
-
-Parameters: Body example:
-
-{
-"email_authorization":"jorge@aguilera.cl",
-"pass_authorization":"testpass",
-"email":"new@use2r.cl",
-"user_pass":"test",
-"name":"Camel02",
-"lastname":"Inc",
-"admin_role":0,
-"id":2
-}
-
-![](create-postman.png)
-
 ##Delete
 
 For use delete you can consume the service from postman using this url:
@@ -121,6 +119,8 @@ Parameters: Body example:
 "email_authorization":"jorge@aguilera.cl",
 "pass_authorization":"testpass"
 }
+
+* You can get the ids with read service, the delete service require only id atrribute and credentials for delete.
 
 ![](delete-postman.png)
 
