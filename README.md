@@ -1,7 +1,10 @@
 # Camel Challenge
 
 
-This repository was created for Camel Challenge.
+This repository was created for Camel Challenge. 
+
+You must use master branch.
+
 ## Installation
 
 Clone the repository.
