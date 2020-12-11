@@ -7,13 +7,13 @@ This repository was created for Camel Challenge.
 Clone the repository.
 
 ##Docker Initialization
-
 *Execute the docker compose file (docker-compose.yml) using the following command.
 (Required: [Docker](https://docker.com/)
 )
 ```sh
 docker-compose up
 ```
+- Recomendation: The containers will use the following ports: 8000, 9000, 3306 (Close this ports if you are using it)
 
 ## Usage example
 
