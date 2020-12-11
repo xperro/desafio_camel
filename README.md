@@ -1,4 +1,4 @@
-# Desafío Camel
+# Camel Challenge
 
 
 This repository was created for Camel Challenge.
@@ -20,15 +20,15 @@ docker-compose up
 Docker containers are ready to use after run the previous command.
 
 This repository have 3 containers:
-1. [WebApp](https://localhost:9000/)
-2. [ApiRest](https://localhost:8000/) (Postman)
-3. [Mysql](https://localhost:3306/)
+1. [WebApp](http://localhost:9000/)
+2. [ApiRest](http://localhost:8000/) (Postman)
+3. [Mysql](http://localhost:3306/)
 
 You can use WebApp for test webapp. WebApp use ApiRest as service.
 
 ## WEBAPP
 
-When containers are up you can visit [WebApp](https://localhost:9000/).
+When containers are up you can visit [WebApp](http://localhost:9000/).
 The Default and only user is the admin user.
 
 email: jorge@aguilera.cl
