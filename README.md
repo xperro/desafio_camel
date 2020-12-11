@@ -49,15 +49,16 @@ The API have the following services:
 4. Delete
 5. Login
 
-####ADMIN CREDENTIALS
+##ADMIN CREDENTIALS
 
 For services update, create, delete the service will require an admin email and password.
 
-#####Default credentials:
+Default credentials:
+
 email_authorization:jorge@aguilera.cl
 pass_authorization:testpass
 
-####READ
+##READ
 
 For use read you can consume the service from postman using this url:
 http://localhost:8000/services/read.php
@@ -66,7 +67,7 @@ Parameters: Dont need parameters.
 
 ![](read-postman.png)
 
-####Update
+##Update
 
 For use update you can consume the service from postman using this url:
 http://localhost:8000/services/update.php
@@ -86,7 +87,7 @@ Parameters: Body example:
 
 ![](update-postman.png)
 
-####Create
+##Create
 
 For use create you can consume the service from postman using this url:
 http://localhost:8000/services/create.php
@@ -106,7 +107,7 @@ Parameters: Body example:
 
 ![](create-postman.png)
 
-####Delete
+##Delete
 
 For use delete you can consume the service from postman using this url:
 http://localhost:8000/services/delete.php
