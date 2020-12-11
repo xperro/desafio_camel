@@ -40,7 +40,7 @@ You can log in with this credentials and access to home. The home view  logs out
 ![](login.png)
 ![](home.png)
 
-## API REST 
+# API REST 
 
 The API have the following services:
 1. Read
